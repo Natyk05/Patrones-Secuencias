@@ -111,7 +111,7 @@ function checkAnswer(selected, button) {
         }, 500);
     } else {
         // Decrementar las vidas.
-        // lives--;
+        lives--;
         // Añadir la clase 'wrong' para indicar una respuesta incorrecta.
         button.classList.add("wrong");
         // Después de un breve retraso, eliminar la clase 'wrong'.
