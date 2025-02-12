@@ -37,14 +37,12 @@ function generateSequence() {
     } else if (difficulty === "experto") {
         let sequenceType = Math.floor(Math.random() * 2);
         if (sequenceType === 0) {
-            console.log("Cuadratica")
             // Secuencia cuadrática
             for (let i = 0; i < 4; i++) {
                 currentSequence.push(start + i * i);
             }
             correctAnswer = start + 4 * 4;
         } else if (sequenceType === 1) {
-            console.log("Fibonacci")
             // Sucesión de Fibonacci
             currentSequence = [start, start];
             for (let i = 2; i < 4; i++) {
@@ -65,7 +63,6 @@ function generateSequence() {
 function generateOptions(correct) {
     // Crear un conjunto para almacenar las opciones, iniciando con la respuesta correcta.
     let options = new Set([correct]);
-    console.log(correct)
 
     // Generar opciones adicionales hasta tener un total de 4.
     while (options.size < 4) {
@@ -95,10 +92,7 @@ function generateOptions(correct) {
  * @param {number} selected - La opción seleccionada por el usuario.
  * @param {HTMLElement} button - El botón que el usuario ha clicado.
  */
-function checkAnswer(selected, button) {
-    console.log(selected)
-    console.log(correctAnswer)
-    
+function checkAnswer(selected, button) {    
     if (selected === correctAnswer) {
         // Incrementar la puntuación.
         score += 10;
